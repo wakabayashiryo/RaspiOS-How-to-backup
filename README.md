@@ -24,7 +24,7 @@
     ~~~
 
 - imgファイルとしてバックアップファイルを作成する
-    > sudo dd bs=100M if=/dev/mmcblk0 of=\<FileName\>.img status=progress   
+    > sudo dd bs=100M if=/dev/mmcblk0 of=\<FileName\>.img status=progress conv=fsync    
     
     if=バックアップするSDカードのデバイス名   
     of=バックアップの保存パスと名前    
@@ -36,7 +36,7 @@
     **※バックアップしたSDカードと同じサイズのSDカードに復元すること**
 
     - imgファイルからSDカードに復元する
-        > sudo dd bs=100M if=\<FileName\>.img of=/dev/mmcblk0 status=progress 
+        > sudo dd bs=100M if=\<FileName\>.img of=/dev/mmcblk0 status=progress conv=fsync   
     
     if=バックアップファイル   
     of=復元先のSDカードのデバイス名    
