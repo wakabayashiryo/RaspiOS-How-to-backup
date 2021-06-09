@@ -41,6 +41,10 @@
 7. USBメモリをアンマウント
     > sudo umount /dev/sda
 
+8. imgファイルをtar.gzファイルに圧縮
+    > tar c \<image file\>.img | pigz -p 4 > \<out put filename\>.tar.gz   
+    https://qiita.com/nkojima/items/1d8491bcec7f71384e8d
+
 - ## 復元の方法 (Linux環境で実行)
     **※バックアップしたSDカードと同じサイズのSDカードに復元すること**
 
