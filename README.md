@@ -32,7 +32,7 @@
 5. USBメモリを/mnt/USBdiskフォルダにマウントする。これでファイルシステムとして認識される
     > sudo mount -t ext4 /dev/sda /mnt/USBdisk/
 6. imgファイルとしてバックアップファイルを作成する
-    > sudo dd bs=100M if=/dev/sda of=/mnt/USBdisk/\<FileName\>yyyymmdd.img status=progress conv=fsync    
+    > sudo dd bs=100M if=/dev/mmcblk0 of=/mnt/USBdisk/\<FileName\>yyyymmdd.img status=progress conv=fsync    
     
     if=バックアップするSDカードのデバイス名   
     of=バックアップの保存パスと名前    
